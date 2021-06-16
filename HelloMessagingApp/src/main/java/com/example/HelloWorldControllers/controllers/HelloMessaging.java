@@ -18,5 +18,13 @@ public class HelloMessaging {
 	public String sayHello() {
 		return "Hello From BridgeLabz !";
 	}
+	
+	/* 	(command: curl "http://localhost:8080/hello/query?name=Pratiksha" -w "\n")
+    	( url:     http://localhost:8080/hello/query?name=Pratiksha) */
+	@RequestMapping(value = {"/query"}, method = RequestMethod.GET)
+	public String sayHello(@RequestParam(value="name")String name) {
+	return "Hello " + name + " !!";
+	}
+	
 
 }
