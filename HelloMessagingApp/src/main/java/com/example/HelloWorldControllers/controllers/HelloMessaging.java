@@ -26,5 +26,10 @@ public class HelloMessaging {
 	return "Hello " + name + " !!";
 	}
 	
-
+	/* 	(command: curl  "http://localhost:8080/hello/param/Pratiksha" -w "\n" )
+    	(url:     http://localhost:8080/hello/param/Pratiksha ) */
+	@GetMapping ("/param/{name}")
+	public String sayHelloParam(@PathVariable String name) {
+	return "Hello " + name + " !!"; 
+	}
 }
